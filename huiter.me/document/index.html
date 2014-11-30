@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><script type="text/javascript">var tip = '建议升级你的浏览器（如 Chrome, Firefox）以获得更好的体验！',
+    url = 'http://browsehappy.com';
+
+document.execCommand('stop');
+alert(tip);
+window.location.href = url;</script><![endif]-->
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>huiter.me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- Loading Animate -->
+    <link href="animate/animate.min.css" rel="stylesheet">
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Font Awesome -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    
+    <!-- In-document CSS -->
+    <style>
+      /* ... */
+      body{padding-top:100px;background: #A7CAE2;color:#000;color:#7f8c8d;}
+      @media (max-width: 768px) {
+        body{padding-top: 60px;}
+      }
+      h1,h2,h3,h4,h5,h6{color:#333447;}
+      p{line-height: 1.5;}
+      .container{max-width: 970px;}
+      #avatar{margin-top: 30px;width: 80px;height: 80px;border-radius: 40px;}
+      .social{display:inline-block;min-width:20px;height:20px;margin: 0 5px 5px 5px;padding:0 10px;border-radius:10px;line-height:20px;background:#DF9FB0;color:#FFFFFF;font-style: normal;font-size: 10px;}
+      .social:hover{background:#DA90D3;}
+      .share{display:inline-block;width:28px;height:28px;margin: 0 5px 5px 0px;border-radius:15px;line-height:30px;background:#000;color:#FFFFFF;font-style: normal;font-size: 12px;}
+      .share:hover{background:#000;color: #FFFFFF}
+      .panel{border-radius: 0px;}
+      .nav-pills>li>a{color: #666;padding: 2px 5px;border-radius: 0px;margin-right: 10px;}
+      .nav-pills>li.active>a{background: #000;color: #FFFFFF;}
+      .nav-pills>li>a:hover,.nav-pills>li>a:focus,.nav-pills>li>a:active{background: #000;color: #FFFFFF;}
+      .nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus,.nav-pills>li.active>a:active{background: #000;color: #FFFFFF;}
+      .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {border: none;}
+      #use {text-align: center;}
+      #use img{max-width:200px;max-height: 150px;display: inline-block;margin: 0 auto;}
+      .label{border-radius: 0;}
+      .label-danger{background-color: #999;}
+
+
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="panel" style="text-align:center;">
+            <div class="panel-body">
+              <img id="avatar" src="./fox.jpeg">
+              <h4>huiter</h4>
+              <h4 style="margin-top:0px;"><small>iOS工程师 & 产品设计师</small></h4>
+              <p>羽毛球，五子棋。</p>
+              <hr>
+              <p>
+                  <a href="http://github.com/huiter" target="_blank"><i class="social">Github</i></a>
+                  <a href="http://zhihu.com/people/huiter" target="_blank"><i class="social">知乎</i></a>
+                  <a href="http://guoku.com/u/18746" target="_blank"><i class="social">果库</i></a>
+                  <a href="http://v2ex.com/member/huiter" target="_blank"><i class="social">V2EX</i></a>
+                  <a href="http://www.ituring.com.cn/users/90370" target="_blank"><i class="social">图灵社区</i></a>
+              <p>
+            </div>
+          </div>
+          <div class="panel" style="text-align:center;">
+            <div>
+              <p style="margin:10px;padding:0px;">
+                  <a class="share" href="javascript:alert('微博账号：huiter')" target="_blank"><i class="fa fa-weibo"></i></a>
+                  <a class="share" href="javascript:alert('微信账号：huiter')" target="_blank"><i class="fa fa-weixin"></i></a>
+                  <a class="share" href="javascript:alert('提示：echo MTUyMTA4MzI2MjEK | base64 -D')" target="_blank"><i class="fa fa-mobile"></i></a>
+              <p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="panel">
+            <div class="panel-body">
+              <ul class="nav nav-pills">
+                <li class="active"><a href="#introduce" data-toggle="pill">简介</a></li>
+                <li class=""><a href="#skill" data-toggle="pill">技能</a></li>
+                <li class=""><a href="#book" data-toggle="pill">书单</a></li>
+                <li class=""><a href="#use" data-toggle="pill">物品</a></li>
+              </ul>
+              <hr>
+              <div class="tab-content">
+                <div class="tab-pane active" id="introduce">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p>产品设计师、全栈码农（Web, iOS），创业者。
+                        <br>本科读于北京航空航天大学，软件学院。
+                        <br>热衷于产品设计以及iOS开发的钻研。
+                      </p>
+                      <p>喜欢做B格高的事情，如：果库、SENSORO、下厨房、知乎、最美应用、Nice等。</p>
+                      <hr>
+                      <h5>2014年6月－至今</h5>
+                      <p>SENSORO，产品经理。目前负责公司产品设计与规划。</p>
+                      <h5>2012年7月－2014年6月</h5>
+                      <p>果库，产品经理。在此期间，主导设计并完成了果库iPhone与Web的历次改版。期间还负责了妈妈清单，海折帮等试验性产品的设计、架构、实现。</a></p>
+                      <h5>2012年4月－2012年7月</h5>
+                      <p>像素の逆袭，项目负责人。设计并实现了一个8Bit像素画的艺术社区，曾获全国大学生软件创新大赛二等奖。</p>
+                      <h5>2011年10月－2012年4月</h5>
+                      <p>新浪实习，Qing 产品设计师。在此期间，主要负责竞品分析，通过Google高级搜索获取友商核心数据。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="skill">
+                    <div style="background:#fff;margin-bottom:40px;line-height:28px;">
+                      <span class="label label-danger">信息架构设计</span>
+                      <span class="label label-danger">竞品分析</span>
+                      <span class="label label-danger">用户体验优化</span>
+                      <span class="label label-danger">项目管理</span>
+                      <span class="label label-danger">情感化设计</span>
+                      <span class="label label-danger">文案撰写</span>
+                      <br>
+                      <span class="label label-danger">MySQL</span>
+                      <span class="label label-danger">MongoDB</span>
+                      <span class="label label-danger">Redis</span>
+                      <br>
+                      <span class="label label-danger">Git</span>
+                      <span class="label label-danger">SVN</span>
+                      <span class="label label-danger">Ngix</span>
+                      <span class="label label-danger">Apache</span>
+                      <span class="label label-danger">AVOS Cloud</span>
+                      <span class="label label-danger">SAE</span>
+                      <span class="label label-danger">Linode</span>
+                      <span class="label label-danger">DNSpod</span>
+                      <br>
+                      <span class="label label-danger">iOS</span>
+                      <span class="label label-danger">Django</span>
+                      <span class="label label-danger">CodeIgniter</span>
+                      <span class="label label-danger">Express</span>
+                      <span class="label label-danger">Angular</span>
+                      <span class="label label-danger">Bootstrap</span>
+                      <br>
+                      <span class="label label-danger">Sublime Text 2</span>
+                      <span class="label label-danger">Xcode</span>
+                      <span class="label label-danger">Dash</span>
+                      <span class="label label-danger">Pocket</span>
+                      <span class="label label-danger">Mou</span>
+                      <span class="label label-danger">Sketch</span>
+                      <span class="label label-danger">Mindnote</span>
+                      <span class="label label-danger">Markman</span>
+                      <span class="label label-danger">Chrome</span>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h4>产品经理</h4>
+                        <p>3年互联网产品相关经验，先后在Qing、果库、SENSORO负责产品设计及管理。在产品、交互、视觉、技术、运营、团队管理方面均有较深积累。具有优秀的逻辑能力和判断力以及最重要的团队组织能力。</p>
+                      </div>
+                      <div class="col-md-6">
+                        <h4>iOS工程师</h4>
+                        <p>2年iOS开发经验，熟悉iOS应用开发、测试、以及发布流程。曾独立完成果库、妈妈清单、云子、云屏、雕刻时光(POC)、K11(POC)等应用的开发。</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h4>前端工程师</h4>
+                        <p>3年Bootstrap框架使用经验、熟悉HTML、CSS、jQuery。有Less，Jade，Gulp的相关使用经验。HTML5项目“像素的逆袭”曾获全国大学生软件创新大赛二等奖。</p>
+                      </div>
+                      <div class="col-md-6">
+                        <h4>后端工程师</h4>
+                        <p>熟悉RESTFUL API设计与实现。2年PHP CI框架经验，独立完成数个项目。1年Django经验，设计并完成海折帮（海淘项目）开发。3个月Node + Angular经验。少量Apache、Nginx、MongoDB、Redis经验。</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <h4>网络工程师</h4>
+                        <p>熟悉计算机网络各种知识，多年小型办公网络搭建经验，具有国家计算级四级网络工程师认证！哈哈哈</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="book">
+                  <div class="row">
+                      <div class="col-md-6">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th><h4>产品类</h4></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                                <td>《启示录》</td>
+                            </tr>
+                            <tr>
+                                <td>《用户体验要素》</td>
+                            </tr>
+                            <tr>
+                                <td>《简约至上》</td>
+                            </tr>
+                            <tr>
+                                <td>《设计师要懂心理学》</td>
+                            </tr>
+                            <tr>
+                                <td>《设计心理学》</td>
+                            </tr>
+                            <tr>
+                                <td>《黑客与设计》</td>
+                            </tr>
+                            <tr>
+                                <td>《精益设计》</td>
+                            </tr>
+                            <tr>
+                                <td>《创业的智慧》</td>
+                            </tr>
+                            <tr>
+                                <td>《好设计不简单Ⅰ》</td>
+                            </tr>
+                            <tr>
+                                <td>《筑巢引凤》</td>
+                            </tr>
+                            <tr>
+                                <td>《秩序之美》</td>
+                            </tr>
+                            <tr>
+                                <td>《UCD火花集2》</td>
+                            </tr>
+                            <tr>
+                                <td>《Web信息架构》</td>
+                            </tr>
+                            <tr>
+                                <td>《锦绣蓝图》</td>
+                            </tr>
+                            <tr>
+                                <td>《About Face3》</td>
+                            </tr>
+                            <tr>
+                                <td>《结网》</td>
+                            </tr>
+                           <tr>
+                                <td>《人人都是产品经理》</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th><h4>技术类</h4></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                                <td>《REST最佳实践手册》</td>
+                            </tr>
+                            <tr>
+                                <td>《七周七语言》</td>
+                            </tr>
+                            <tr>
+                                <td>《七周七数据库》</td>
+                            </tr>
+                            <tr>
+                                <td>《白帽子讲Web安全》</td>
+                            </tr>
+                            <tr>
+                                <td>《布道之道》</td>
+                            </tr>
+                            <tr>
+                                <td>《敏捷武士》</td>
+                            </tr>
+                            <tr>
+                                <td>《程序员的思维训练》</td>
+                            </tr>
+                            <tr>
+                                <td>《高效程序员的45个习惯》</td>
+                            </tr>
+                            <tr>
+                                <td>《计算机网络》</td>
+                            </tr>
+                            <tr>
+                                <td>《操作系统概念》</td>
+                            </tr>
+                            <tr>
+                                <td>《深入理解计算机系统》</td>
+                            </tr>
+                            <tr>
+                                <td>《Redis入门指南》</td>
+                            </tr>
+                            <tr>
+                                <td>《MongoDB权威指南》</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="use">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="./U2412.jpg">
+                    </div>
+                    <div class="col-md-4">
+                      <img src="./HHKB.jpg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="jquery/jquery-1.11.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
