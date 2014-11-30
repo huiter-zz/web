@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><script type="text/javascript">var tip = '建议升级你的浏览器（如 Chrome, Firefox）以获得更好的体验！',
+    url = 'http://browsehappy.com';
+
+document.execCommand('stop');
+alert(tip);
+window.location.href = url;</script><![endif]-->
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>方块 - 地铁时光杀手</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- Loading Animate -->
+    <link href="animate/animate.min.css" rel="stylesheet">
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Font Awesome -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    
+    <!-- In-document CSS -->
+    <style>
+      /* ... */
+      body{text-align:center;padding-top:60px;background: #ffffff;color:#000;color:#34495e;font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      @media (max-width: 768px) {
+        body{padding-top: 60px;}
+      }
+      #intro{padding-top: 60px;text-align:center;}
+      @media (max-width: 768px) {
+        #intro{padding-top:60px;}
+      }
+      h1,h2,h3,h4,h5,h6{color:#2b2b2b;}
+      p{line-height: 1.5;}
+      .palette {
+  color: white;
+  margin: 0;
+  padding: 15px;
+  text-transform: uppercase; }
+  .palette dt {
+    display: block;
+    font-weight: 500;
+    opacity: 0.8; }
+  .palette dd {
+    font-weight: 200;
+    margin-left: 0;
+    opacity: 0.8; }
+
+    .palette-firm {
+      background-color: #1abc9c; }
+
+    .palette-firm-dark {
+      background-color: #16a085; }
+
+    .palette-success {
+      background-color: #2ecc71; }
+
+    .palette-success-dark {
+      background-color: #27ad60; }
+
+    .palette-info {
+      background-color: #3498db; }
+
+    .palette-info-dark {
+      background-color: #2383c4; }
+
+    .palette-warning {
+      background-color: #f1c40f; }
+
+    .palette-warning-dark {
+      background-color: #cea70c; }
+
+    .palette-danger {
+      background-color: #e74c3c; }
+
+    .palette-danger-dark {
+      background-color: #dc2d1b; }
+
+    .palette-night {
+      background-color: #34495e; }
+
+    .palette-night-dark {
+      background-color: #2c3e50; }
+
+    .palette-bright {
+      background-color: #f1c40f; }
+
+    .palette-bright-dark {
+      background-color: #cea70c; }
+
+    .palette-success-dark {
+      background-color: #27ae60; }
+
+    .palette-info-dark {
+      background-color: #2980b9; }
+
+    .palette-bright-dark {
+      background-color: #f39c12; }
+
+    .palette-amethyst {
+      background-color: #9b59b6; }
+
+    .palette-wisteria {
+      background-color: #8e44ad; }
+
+    .palette-carrot {
+      background-color: #e67e22; }
+
+    .palette-pumpkin {
+      background-color: #d35400; }
+
+    .palette-alizarin {
+      background-color: #e74c3c; }
+
+    .palette-pomegranate {
+      background-color: #c0392b; }
+
+    .palette-clouds {
+      background-color: #ecf0f1;
+      color: #bdc3c7; }
+
+    .palette-silver {
+      background-color: #bdc3c7; }
+
+    .palette-concrete {
+      background-color: #95a5a6; }
+
+    .palette-asbestos {
+      background-color: #7f8c8d; }
+    .col-md-4.col-xs-6 {margin-bottom: 20px;}
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-md-offset-1">
+          <div id="intro">
+            <img src="./icon.png" style="width:100px;height:100px;border-radius: 15px;">
+            <h5> <small style="text-align:center;font-size:20px;color:rgba(52, 73, 94, 0.3);font-weight:100;">地铁时光杀手</small></h5>
+            <br>
+            <a href="http://pgyer.com/GWJ7" target="_blank"><img src="./appstore.png" style="width:115px;height:34px;"></a>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-4 col-xs-6"> 
+                  <dl class="palette palette-night">
+                    <dt>Tap</dt>
+                  </dl>
+                  <dl class="palette palette-night-dark">
+                    <dd>变形</dd>
+                  </dl>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                  <dl class="palette palette-firm">
+                    <dt>Shake</dt>
+                  </dl>
+                  <dl class="palette palette-firm-dark">
+                    <dd>暂停</dd>
+                  </dl>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                  <dl class="palette palette-success">
+                    <dt>Swipe ←</dt>
+                  </dl>
+                  <dl class="palette palette-success-dark">
+                    <dd>左移</dd>
+                  </dl>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                  <dl class="palette palette-info">
+                    <dt>Swipe →</dt>
+                  </dl>
+                  <dl class="palette palette-info-dark">
+                    <dd>右移</dd>
+                  </dl>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                  <dl class="palette palette-alizarin">
+                    <dt>Swipe ↓</dt>
+                  </dl>
+                  <dl class="palette palette-pomegranate">
+                    <dd>加速</dd>
+                  </dl>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                  <dl class="palette palette-bright">
+                    <dt>Nothing</dt>
+                  </dl>
+                  <dl class="palette palette-bright-dark">
+                    <dd>GameOver</dd>
+                  </dl>
+                </div>
+              </div> <!-- /color swatches -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div style="text-align:center;">
+            <img src="./interface.gif" class="img-responsive" style="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="jquery/jquery-1.11.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
