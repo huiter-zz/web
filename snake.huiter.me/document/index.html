@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><script type="text/javascript">var tip = '建议升级你的浏览器（如 Chrome, Firefox）以获得更好的体验！',
+    url = 'http://browsehappy.com';
+
+document.execCommand('stop');
+alert(tip);
+window.location.href = url;</script><![endif]-->
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>小蛇</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- Loading Animate -->
+    <link href="animate/animate.min.css" rel="stylesheet">
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Font Awesome -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    
+    <!-- In-document CSS -->
+    <style>
+      /* ... */
+      body{text-align:center;padding-top:60px;background: #ffffff;color:#000;color:#34495e;font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      @media (max-width: 768px) {
+        body{padding-top: 60px;}
+      }
+      #intro{padding-top:100px;text-align:center;}
+      @media (max-width: 768px) {
+        #intro{padding-top:60px;}
+      }
+      h1,h2,h3,h4,h5,h6{color:#2b2b2b;}
+      p{line-height: 1.5;}
+      .snake{width: 20px;height: 20px; background: #E74C3C;display: inline-block;}
+      .blank{width: 20px;height: 20px; background: #ffffff;display: inline-block;}
+      .point{width: 20px;height: 20px; background: #3498DB;display: inline-block;}
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <div id="intro">
+            <div style="margin-bottom:50px;">
+              <div class="snake"></div>
+              <div class="snake"></div>
+              <div class="snake"></div>
+              <div class="snake"></div>
+              <div class="snake"></div>
+              <div class="blank"></div>
+              <div class="point"></div>
+            </div>
+            <hr>
+            <h5> <small style="text-align:center;font-size:30px;color:rgba(52, 73, 94, 0.3);font-weight:100;">小蛇</small></h5>
+            <a href="http://www.pgyer.com/snakeapp" target="_blank"><img src="./appstore.png" style="width:115px;height:34px;"></a>
+            <br>
+            <br>
+            <div class="well">
+              <span class="label label-default">下载密码：snake</span>
+              <hr>
+              <img src="./screen.png" class="img-responsive" style="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+
+
+    <!-- Load JS here for greater good =============================-->
+    <script src="jquery/jquery-1.11.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
