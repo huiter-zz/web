@@ -2,7 +2,7 @@
 <!-- saved from url=(0049)http://o2o.gtimg.com/ibeacon/html/public/yzb.html -->
 <html><head lang="zh-CN"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <title>摇一摇</title>
+    <title>云子 • 摇一摇</title>
     <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -13,17 +13,24 @@
     .mod-page0 {
         width: 100%;
         height: 100%;
-        background-color: #36b348;
+        background-color: #49bd32;
         position: relative;
     }
-    .mod-page0__icon-logo {
-        width: 106px;
-        height: 115px;
+    .mod-page0__icon-icon {
+        width: 320px;
+        height: 320px;
         left: 50%;
-        margin-left: -53px;
-        top: 72px;
-        background-image: url(./assets/icon);
-        background-position: -545px -280px;
+        margin-left: -160px;
+        top: -20%;
+        opacity: 1; 
+    }
+    .mod-page0__icon-logo {
+        width: 230px;
+        height: 36px;
+        left: 50%;
+        margin-left: -115px;
+        top: 100%;
+        opacity: 1; 
     }
     </style>
 </head>
@@ -31,16 +38,22 @@
 <ul class="mod-page__list">
     <!--计算每个li的高度等于窗口高度，注意微信头部title-->
     <li style="height: 912px;">
-        <div class="mod-page0 ui-d-n">
-            <div class="mod-page__title" style="font-size:60px;">云子摇一摇</div>
+        <div class="mod-page0 ">
             <div class="mod-page__main">
-                <div class="icon ui-pos-a mod-page0__icon-logo"></div>
+                <div class="mod-page__scene">
+                    <div class="icon ui-pos-a mod-page0__icon-icon">
+                        <img src="./assets/icon.png" style="width:100%;height:100%;">
+                    </div>
+                    <div class="icon ui-pos-a mod-page0__icon-logo">
+                        <img src="./assets/logo.png" style="width:100%;height:100%;">
+                    </div>
+                </div>
             </div>
             <div class="mod-page__arrow"></div>
         </div>
     </li>
     <li style="height: 912px;">
-        <div class="mod-page1">
+        <div class="mod-page1 ui-d-n">
             <div class="mod-page__main">
                 <div class="mod-page__scene">
                     <div class="icon ui-pos-a mod-page1__icon-bg"></div>
@@ -177,13 +190,20 @@
                 </div>
             </div>
             <div class="mod-page6__contact">
-                <div class="mod-page6__contact-desc">联系我们</div>
+                <div class="mod-page6__contact-desc" style="font-size:16px;">SENSORO，中国北京(总部)</div>
                 <div>
                     <div class="ui-d-ib ui-ta-l">
-                        SENSORO，中国北京(总部)
-
+                        邮箱：beijing@sensoro.com
+                    </div>
+                </div>
+                <div>
+                    <div class="ui-d-ib ui-ta-l">
                         电话：010-84161077
-                        地址：北京市朝阳区望京街10号 望京SOHO 1号楼 B座 2807
+                    </div>
+                </div>
+                <div>
+                    <div class="ui-d-ib ui-ta-l">
+                        地址：北京市朝阳区望京SOHO 1号楼 B座 2807
                     </div>
                 </div>
             </div>
