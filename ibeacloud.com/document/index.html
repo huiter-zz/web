@@ -23,26 +23,43 @@ window.location.href = url;</script><![endif]-->
     <!-- In-document CSS -->
     <style>
       /* ... */
-      body{-webkit-user-select: none;background:#ffffff;color:#ccc;font-family: Verdana,"Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
-      h1,h2,h3,h4,h5,h6{color:#2b2b2b;}
+      body{background:#ffffff;color:#ccc;font-family: Verdana,"Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+      h1,h2,h3,h4,h5,h6{color:#303233;}
       p{line-height: 1.5;}
       a{color:#999;}
       a:hover{color:#555;}
       .caption p {min-height: 40px;font-size: 14px;}
       .caption h2 {display: none;}
-      #case .thumbnail>img{max-height: 300px;}
+
       hr{border-top: 1px solid #cacaca;}
+      ::selection {
+        color: #fff;
+        text-shadow: none;
+        background: #303233;
+      }
 
       #feature .panel {border: none;border-radius: 2px;}
 
-      #feature {background:#f17370;}
+      #feature {background:#ff8c5d;}
       #feature h1,h2,h3,h4,h5,h6{color:#ffffff;}
       #feature .container{text-align: center;padding: 80px 0 160px 0;}
-      #feature i{color: #f17370;display: inline-block;height: 40px;margin-top: 20px;}
-      #feature h4{color: #f17370;font-size: 16px;}
+      #feature i{color: #ff8c5d;display: inline-block;height: 40px;margin-top: 20px;}
+      #feature h4{color: #ff8c5d;font-size: 16px;}
 
-      #principle {background:#f17370;}
-      #principle .container{text-align: center;padding: 80px 0 160px 0;}
+      #principle {background:#ff8c5d;}
+      #principle .container{text-align: center;padding: 80px 0 0px 0;}
+
+      #case h1,h2,h3,h4,h5,h6{color:#ffffff;}
+      #case {background: #111111;}
+      #case .container{text-align: center;padding: 80px 0 100px 0;}
+
+      #saying {background:#f2f2f2;}
+      #saying .container{text-align: center;padding: 80px 0 120px 0;}
+
+      #partner {background:#ffffff;}
+      #partner .container{text-align: center;padding: 80px 0 60px 0;}
+
+      footer{text-align: center;padding: 20px;font-size: 14px;}
     </style>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
@@ -61,12 +78,12 @@ window.location.href = url;</script><![endif]-->
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="../" class="navbar-brand"><i class="fa fa-bullseye"></i> IBEA Cloud</a>
+          <a href="/" class="navbar-brand"><i class="fa fa-bullseye"></i> IBEA Cloud</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active">
-              <a href="#">产品</a>
+              <a href="/">产品</a>
             </li>
             <li>
               <a href="#">控制台</a>
@@ -99,7 +116,7 @@ window.location.href = url;</script><![endif]-->
           <div class="row">
             <div class="col-md-12">
               <h1 style="color:white;margin-top:250px;font-size:60px;font-weight:100;">IBEA Cloud</h1>
-              <h1 style="color:white;font-size:25px;">打造基于 iBeacon 的商业智能云平台</h1>
+              <h1 style="color:white;font-size:25px;">打造基于 iBeacon 的智能商业云服务</h1>
             </div>
           </div>
         </div>
@@ -159,15 +176,85 @@ window.location.href = url;</script><![endif]-->
             </div>
           </div>
         </div>
+        <div style="margin-top:40px;">
+          <img class="img-responsive" src="img/cloud.png" style="margin:0 auto;">
+        </div>
       </div>
     </div>
-    <div id="principle">
+    <div id="case">
       <div class="container">
-        
+        <h1>行业场景</h1>
+        <div class="row" style="margin:30px auto;">
+          <div class="col-md-3">
+            <h3>金融服务</h3>
+            <p>根据时间和地点为用户提供个性化的服务，提高客户服务水平。</p>
+          </div>
+          <div class="col-md-3">
+            <h3>酒店</h3>
+            <p>快速办理入住、续订，加快队列处理速度，改善客户体验。</p>          
+          </div>
+          <div class="col-md-3">
+            <h3>公共交通</h3>
+            <p>为乘客提供实时消息，及室内环境中的定位服务。</p>  
+          </div>
+          <div class="col-md-3">
+            <h3>出版业</h3>
+            <p>赋予传统出版物互联网ID，配合新媒体内容，改变读者体验。</p>  
+          </div>
+        </div>
+        <div class="row" style="margin:30px auto;">
+          <div class="col-md-3">
+            <h3>媒体广告</h3>
+            <p>可互动富媒体广告，为客户提供更好的增值服务，增加营收。</p>  
+          </div>
+          <div class="col-md-3">
+            <h3>博物馆</h3>
+            <p>靠近展品，自动显示展品多媒体信息，提升参观体验。</p>  
+          </div>
+          <div class="col-md-3">
+            <h3>机场</h3>
+            <p>行李跟踪提醒，机场内部室内定位寻路，媒体广告互动。</p>  
+          </div>
+          <div class="col-md-3">
+            <h3>大型活动</h3>
+            <p>演唱会现场互动，抽奖，大屏互动。</p>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="saying">
+      <div class="container">
+        <h1></h1>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="quote_box" style="background:#e4f9fe;margin:0px 200px;font-size:24px;color:#498ec0;padding:20px 40px;">
+              <p style="text-align:left;">
+                <i class="fa fa-quote-left"></i>
+                iBeacon 将改变线下零售的整个生态，IBEA Cloud 很好地推进了这一切！
+                <i class="fa fa-quote-right"></i>
+              </p>
+              <h3 style="text-align:right;color:#498ec0;font-size:24px;">赵武阳，SENSORO创始人&CEO</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="partner">
+      <div class="container">
+        <h1>合作伙伴</h1>
+        <div class="row">
+          <div class="col-md-12">
+            <img class="img-responsive" src="img/partners.png" style="margin:0 auto;">
+          </div>
+        </div>
       </div>
     </div>
     <!-- /.container -->
-
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Copyright © IBEA Cloud Inc.</p>
+      </div>
+    </footer>
     <!-- Load JS here for greater good =============================-->
     <script src="jquery/jquery-1.11.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
