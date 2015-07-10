@@ -1,0 +1,45 @@
+/* ... */
+body{background:#ffffff;color:#ccc;font-family: Verdana,"Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+h1,h2,h3,h4,h5,h6{color:#303233;}
+p{line-height: 1.5;}
+a{color:#999;}
+a:hover{color:#555;}
+.caption p {min-height: 40px;font-size: 14px;}
+.caption h2 {display: none;}
+
+hr{border-top: 1px solid #cacaca;}
+::selection {
+  color: #fff;
+  text-shadow: none;
+  background: #303233;
+}
+
+#feature .panel {border: none;border-radius: 2px;}
+
+#feature {background:#ff8c5d;}
+#feature h1,#feature h2,#feature h3,#feature h4,#feature h5,#feature h6{color:#ffffff;}
+#feature {text-align: center;padding: 80px 0 160px 0;}
+#feature i{color: #ff8c5d;display: inline-block;height: 40px;margin-top: 20px;}
+#feature h4{color: #ff8c5d;font-size: 16px;}
+
+#principle {background:#ff8c5d;}
+#principle .container{text-align: center;padding: 80px 0 0px 0;}
+
+#case h1,#case h2,#case h3,#case h4,#case h5,#case h6{color:#ffffff;}
+#case {background: #111111;}
+#case p {height: 80px;}
+#case .container{text-align: center;padding: 80px 0 100px 0;}
+
+#saying {background:#f2f2f2;}
+#saying {text-align: center;padding: 80px 0 120px 0;}
+
+#partner {background:#ffffff;}
+#partner {text-align: center;padding: 80px 0 60px 0;}
+
+footer{text-align: center;padding: 20px;font-size: 14px;background: #000;}
+
+.navbar-nav>.active>a, .navbar-nav>.active>a:focus, .navbar-nav>.active>a:hover {
+  background-color: #f6f6f6; 
+  color: #333;
+  font-weight: 1000;
+}
