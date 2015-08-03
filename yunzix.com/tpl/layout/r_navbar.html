@@ -1,0 +1,126 @@
+<!-- menu -->
+<div class="app-aside hidden-xs bg-dark">
+  <div class="aside-wrap">
+    <div class="navi-wrap">
+      <!-- user -->
+      <div class="clearfix hidden-xs text-center" id="aside-user">
+        <div class="dropdown wrapper">
+          <a ui-sref="app.page.profile">
+            <span class="thumb-lg w-auto-folded avatar m-t-sm">
+              <img src="img/b0.jpg" class="img-full" alt="...">
+            </span>
+          </a>
+          <a href="#">
+            <span class="clear">
+              <span class="block m-t-sm">
+                <strong class="font-bold text-lt">水木锦堂</strong> 
+              </span>
+              <span class="text-muted text-xs block">{{'navbar.manager' | translate}}</span>
+            </span>
+          </a>
+          <!-- dropdown -->
+          <ul class="dropdown-menu animated fadeInRight w hidden-folded">
+            <li>
+              <a href>{{'navbar.setting' | translate}}</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a ui-sref="access.signin">{{'navbar.logout' | translate}}</a>
+            </li>
+          </ul>
+          <!-- / dropdown -->
+        </div>
+      </div>
+      <!-- / user -->
+
+      <!-- nav -->
+      <nav ui-nav class="navi">
+        <ul class="nav">
+          <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+            <span>系统管理员</span>
+          </li>
+          <li>
+            <a ui-sref="cloud.agent">
+              <i class="fa-black-tie fa text-default"></i>
+              <span class="font">运营商管理</span>
+            </a>
+          </li>
+          <li>
+            <a ui-sref="cloud.store">
+              <i class="fa-money fa text-default"></i>
+              <span class="font">商户管理</span>
+            </a>
+          </li>
+          <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+            <span>运营商权限</span>
+          </li>
+          <li>
+            <a ui-sref="cloud.store">
+              <i class="fa-money fa text-default"></i>
+              <span class="font">商户管理</span>
+            </a>
+          </li>
+          <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+            <span>{{'navbar.basefun' | translate}}</span>
+          </li>
+          <li>
+            <a ui-sref="cloud.dashboard">
+              <i class="fa-tachometer fa text-default"></i>
+              <span class="font">{{'navbar.overview' | translate}}</span>
+            </a>
+          </li>
+          <li>
+            <a ui-sref="cloud.appstore">
+              <i class="fa-th-large fa text-default"></i>
+              <span class="font">{{'navbar.appSquare' | translate}}</span>
+            </a>
+          </li>
+
+          <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">          
+            <span>{{'navbar.accountSetting' | translate}}</span>
+          </li>  
+          <li>
+            <a ui-sref="cloud.profile">
+              <i class="fa-user fa text-default-lter"></i>
+              <span>{{'navbar.baseInfo' | translate}}</span>
+            </a>
+          </li>
+          <li>
+            <a ui-sref="cloud.wechat">
+              <i class="fa-wechat fa text-default-lter"></i>
+              <b class="badge bg-danger pull-right">未完成</b>
+              <span>{{'navbar.weixinOauth' | translate}}</span>
+            </a>
+          </li>
+          <li>
+            <a ui-sref="cloud.document">
+              <i class="fa-question-circle fa text-default-lter"></i>
+              <span>{{'navbar.help' | translate}}</span>
+            </a>
+          </li>
+          <li>
+            <a href="tpl/login.html">
+              <i class="fa fa-sign-out text-default-lter"></i>
+              <span>{{'navbar.logout' | translate}}</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- nav -->
+
+      <!-- aside footer -->
+      <div class="wrapper m-t">
+        <div class="text-center-folded">
+          <span class="pull-right pull-none-folded">100%</span>
+          <span class="hidden-folded">{{'navbar.systemStatus' | translate}}</span>
+        </div>
+        <div class="progress progress-xxs m-t-sm dk">
+          <div class="progress-bar progress-bar-default" style="width: 100%;">
+          </div>
+        </div>
+      </div>
+      <!-- / aside footer -->
+    </div>
+  </div>
+</div>
+<!-- / menu -->
