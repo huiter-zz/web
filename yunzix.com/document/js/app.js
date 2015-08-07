@@ -1,262 +1,133 @@
-'use strict';
+/* -----------------------------------------------
+/* How to use? : Check the GitHub README
+/* ----------------------------------------------- */
 
-(function(angular, Sensoro, undefined){
-  var app = angular.module('wechat-platform', ['ui.router',  'oc.lazyLoad', 'ngCookies', 'ui.bootstrap', 'i18n']);
-  Sensoro.app = app;
+/* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
+/*
+particlesJS.load('particles-js', 'particles.json', function() {
+  console.log('particles.js loaded - callback');
+});
+*/
 
-  /**
-  * 路由逻辑
-  *
-  *
-  */
+/* Otherwise just put the config content (json): */
 
-  app.constant('RouteManifest', {
-    // 第一层
-    'index': { // 初始页面，无内容，跳转
-      url: '/',
-      templateUrl: 'tpl/loading.html',
-      controller: 'IndexCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/index.js']);
-          }
-        ]
+particlesJS('particles-js',
+  
+  {
+    "particles": {
+      "number": {
+        "value": 100,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 1.0,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 5,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 2,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 100,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 2,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
       }
     },
-    'home' : { // 首页
-      url: '/home',
-      templateUrl: 'tpl/home.html',
-      controller: 'HomeCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/home.js', 'js/lib/particles.min.js']);
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": false,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 400,
+          "line_linked": {
+            "opacity": 1
           }
-        ]
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
       }
-    },  
-    'login' : { // 登陆页面
-      url: '/login',
-      templateUrl: 'tpl/login.html',
-      controller: 'LoginCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/login.js']);
-          }
-        ]
-      }
     },
-    'cloud': {
-      url: '/cloud',
-      templateUrl: 'tpl/cloud.html',
-      controller: 'CloudCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/cloud.js']);
-          }
-        ]
-      }      
-    },
-    // 第二层
-    'cloud.agent': {
-      url: '/agent',
-      templateUrl: 'tpl/agent.html',
-      controller: 'AgentCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/agent.js']);
-          }
-        ]
-      }      
-    },
-    'cloud.store': {
-      url: '/store',
-      templateUrl: 'tpl/store.html',
-      controller: 'StoreCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/store.js']);
-          }
-        ]
-      }      
-    },
-    'cloud.dashboard': {
-      url: '/dashboard',
-      templateUrl: 'tpl/dashboard.html',
-      controller: 'DashboardCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/dashboard.js']);
-          }
-        ]
-      }      
-    },
-    'cloud.appstore': {
-      url: '/appstore',
-      templateUrl: 'tpl/appstore.html',
-      controller: 'AppStoreCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/appstore.js']);
-          }
-        ]
-      }      
-    },
-    'cloud.profile': {
-      url: '/profile',
-      templateUrl: 'tpl/profile.html',
-      controller: 'ProfileCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/profile.js']);
-          }
-        ]
-      }      
-    },
-    'cloud.wechat': {
-      url: '/wechat',
-      templateUrl: 'tpl/wechat.html',
-      controller: 'WechatCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/wechat.js']);
-          }
-        ]
-      }      
-    },
-    'cloud.document': {
-      url: '/document',
-      templateUrl: 'tpl/document.html',
-      controller: 'DocumentCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/document.js']);
-          }
-        ]
-      }      
-    },
-    // 第三层
-    'cloud.appstore.face': {
-      url: '/appstore/face',
-      parent: 'cloud',
-      templateUrl: 'tpl/face.html',
-      controller: 'FaceCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/face.js']);
-          }
-        ]
-      }      
-    },
-    'cloud.appstore.menu': {
-      url: '/appstore/menu',
-      parent: 'cloud',
-      templateUrl: 'tpl/menu.html',
-      controller: 'MenuCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/menu.js']);
-          }
-        ]
-      }      
-    },
-    'cloud.appstore.brand': {
-      url: '/appstore/brand',
-      parent: 'cloud',
-      templateUrl: 'tpl/brand.html',
-      controller: 'BrandCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/brand.js']);
-          }
-        ]
-      }      
-    },
-    'cloud.appstore.box': {
-      url: '/appstore/box',
-      parent: 'cloud',
-      templateUrl: 'tpl/box.html',
-      controller: 'BoxCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/box.js']);
-          }
-        ]
-      }      
-    },
-    'cloud.appstore.shake': {
-      url: '/appstore/shake',
-      parent: 'cloud',
-      templateUrl: 'tpl/shake.html',
-      controller: 'ShakeCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/shake.js']);
-          }
-        ]
-      }      
-    },
-    //创建
-    'cloud.appstore.face.create': {
-      url: '/appstore/face/create',
-      parent: 'cloud',
-      templateUrl: 'tpl/face_create.html',
-      controller: 'ShakeCtrl',
-      resolve: {
-        deps: ['$ocLazyLoad',
-          function( $ocLazyLoad ){
-            return $ocLazyLoad.load(['js/face_create.js']);
-          }
-        ]
-      }      
-    },
-  });
+    "retina_detect": true,
+    "config_demo": {
+      "hide_card": false,
+      "background_color": "#232323",
+      "background_image": "",
+      "background_position": "50% 50%",
+      "background_repeat": "no-repeat",
+      "background_size": "cover"
+    }
+  }
 
-  /**
-    * 路由配置
-    * authentication 为 true 则需要验证是否以登陆
-    */
-  app.config(function($stateProvider, $urlRouterProvider, $locationProvider, RouteManifest) {
-    $urlRouterProvider.otherwise('/login');
-    Object.keys(RouteManifest).forEach(function(path) {
-      if (RouteManifest[path].authentication) {
-        RouteManifest[path].resolve = angular.extend(RouteManifest[path].resolve || {}, {
-          user: function(User) {
-            return User.ensureLogin(RouteManifest[path].authentication);
-          }
-        });
-      }
-      $stateProvider.state(path, RouteManifest[path]);
-    });
-    $locationProvider.html5Mode(true);
-  });
-
-  app.run(function($rootScope, $location) {
-    /**
-      * 监听跳转到登陆页面事件
-      */
-    $rootScope.$on('event:auth-loginRequired', function() {
-      $location.path('/login');
-    });
-
-  });
-
-
-
-})(angular, Sensoro);
-
+);
