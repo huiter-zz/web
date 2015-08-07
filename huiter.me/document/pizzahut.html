@@ -15,7 +15,9 @@ src="http://zb.weixin.qq.com/nearbycgi/addcontact/BeaconAddContactJsBridge.js">
             if(apiResult.err_code == 0){
                 var status = apiResult.data;
                 if(status == 1){
-                  self.location.href="http://www.pizzahut.com.cn/"
+                  var storecode = getQueryString(storecode); 
+                  self.location.href="http://store.pizzahut.com.cn/?utm_source=wechat_shakearound&storecode"+storecode;
+
                 }else{
                   BeaconAddContactJsBridge.invoke('jumpAddContact');
                 }
@@ -24,6 +26,13 @@ src="http://zb.weixin.qq.com/nearbycgi/addcontact/BeaconAddContactJsBridge.js">
             }
         });
     });
+    // 获取url上的query内容
+  function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r !== null) return unescape(r[2]);
+    return null;
+  }
 </script>
 </body>
 </html>
