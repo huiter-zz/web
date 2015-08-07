@@ -16,7 +16,7 @@ src="http://zb.weixin.qq.com/nearbycgi/addcontact/BeaconAddContactJsBridge.js">
                 var status = apiResult.data;
                 if(status == 1){
                   var storecode = getQueryString("storecode"); 
-                  self.location.href="http://store.pizzahut.com.cn/?utm_source=wechat_shakearound&storecode"+storecode;
+                  self.location.href="http://store.pizzahut.com.cn/?utm_source=wechat_shakearound&storecode="+storecode;
 
                 }else{
                   BeaconAddContactJsBridge.invoke('jumpAddContact');
