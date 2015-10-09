@@ -1,84 +1,28 @@
-<!DOCTYPE html>
-<!--[if lt IE 8]><script type="text/javascript">var tip = '建议升级你的浏览器（如 Chrome, Firefox）以获得更好的体验！',
-    url = 'http://browsehappy.com';
-
-document.execCommand('stop');
-alert(tip);
-window.location.href = url;</script><![endif]-->
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <title>云子摇一摇</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <!-- Loading Animate -->
-    <link href="animate/animate.min.css" rel="stylesheet">
-    <!-- Loading Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Loading Font Awesome -->
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    
-    <!-- In-document CSS -->
-    <style>
-      /* ... */
-      body{background: #f7d25a;color:#fff;}
-      .thumbnail{margin-bottom: 10px;border: none;background: none;}
-      .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 5px;
-    padding-left: 5px;
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>HTML5 手机摇一摇</title>
+<script type="text/javascript">
+var color = new Array('#fff', '#ff0', '#f00', '#000', '#00f', '#0ff');
+if(window.DeviceMotionEvent) {
+    var speed = 25;
+    var x = y = z = lastX = lastY = lastZ = 0;
+    window.addEventListener('devicemotion', function(){
+        var acceleration =event.accelerationIncludingGravity;
+        x = acceleration.x;
+        y = acceleration.y;
+        if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed) {
+            document.body.style.backgroundColor = color[Math.round(Math.random()*10)%6];
+        }
+        lastX = x;
+        lastY = y;
+    }, false);
 }
-.row{margin-left: -5px;margin-right: -5px;}
-    </style>
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-  <div class="container" style="margin-top:20px;">
-    <div class="row">
-      <div class="col-md-4">
-        <a href="http://dwz.cn/1jYqx5" class="thumbnail">
-          <img src="AD0.jpeg">
-        </a>
-      </div>
-      <div class="col-xs-6">
-        <a href="#" class="thumbnail">
-          <img src="AD2.PNG">
-        </a>
-      </div>
-      <div class="col-xs-6">
-        <a href="#" class="thumbnail">
-          <img src="AD3.PNG">
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx32f41fc7cfce353f&redirect_uri=http://weixin.sensoro.com/oauth/callback&response_type=code&scope=snsapi_userinfo&state=http%3A%2F%2Fweixin.sensoro.com%2Fapp%2Flotterybox%3Fappid%3Dwx32f41fc7cfce353f%26lid%3D55c81266784751e81544ed91&component_appid=wx5429762e8f96f4de#wechat_redirect" class="thumbnail">
-          <img src="AD0-1.jpeg">
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a href="#" class="thumbnail">
-          <img src="AD1.PNG">
-        </a>
-      </div>
-      <div class="col-xs-12">
-        <a href="#" class="thumbnail">
-          <img src="AD4.PNG">
-        </a>
-      </div>
-    </div>
-  </div>
-    <!-- /.container -->
-
-
-    <!-- Load JS here for greater good =============================-->
-    <script src="jquery/jquery-1.11.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-  </body>
+</script>
+</head>
+<body>
+HTML 5 手机摇一摇，在手机上运行的。
+</body>
 </html>
